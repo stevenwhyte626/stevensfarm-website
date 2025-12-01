@@ -1,0 +1,476 @@
+
+:root {
+    --primary-color: #8B0000; /* Deep Red for warmth/freshness */
+    --secondary-color: #FF8C00; /* Dark Orange for accent */
+    --tertiary-color: #38761D; /* Natural Green */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --font-family: 'Roboto', sans-serif;
+}
+    *{
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 2px;
+}
+.topnav {
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+.topnav a.active {
+    background-color:#8B0000;
+    color: white;
+}
+.topnav a:hover {
+    background-color: #FF8C00;
+    color: white;
+}
+.topnav .icon {
+     display: none;
+}
+
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+}
+header{
+    background: white;
+    padding: 10px 5%;
+    display: inline-block;
+    align-items: center;
+    border-bottom: 3px solid #FF8C00;
+    text-align: center;
+}
+.logo h1 {
+    font-size: 2em;
+    color: #8B0000;
+}
+
+.logo .farm {
+    color: #FF8C00;
+}
+
+.logo p {
+    font-size: 0.9em;
+    color: #38761D;
+    margin-top: -5px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 30px 0;
+    background: var(--light-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero figure {
+    flex: 1;
+    margin: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero figcaption {
+    background: #38761D;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #FF8C00;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color:#8B0000;
+}
+.features {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-block {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.feature-block ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.feature-block ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23FF8C00" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>') no-repeat left center; 
+    background-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.quick-fact {
+    background: #fffbe6;
+    border-left: 5px solid #FF8C00;
+    padding: 10px;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+footer {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+footer h4 {
+    color: #FF8C00;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.mission-vision{
+    background: var(--light-bg);
+    border-left: 8px solid var(--tertiary-color);
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1.15em;
+    font-style: italic;
+    color: #555;
+}
+.timeline ol {
+    list-style-type: none; 
+    counter-reset: timeline-counter; 
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.timeline ol li {
+    counter-increment: timeline-counter;
+    position: relative;
+    padding: 15px 0 15px 40px;
+    border-left: 2px solid var(--secondary-color);
+    margin-left: 20px;
+}
+
+.timeline ol li::before {
+    content: counter(timeline-counter);
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 0 0 4px white;
+}
+
+.timeline ol li:last-child {
+    border-left: none;
+}
+.product-categories {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.category {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fdfdfd;
+}
+
+.category h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+details {
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+details p, details ul {
+    padding: 5px 0 0 10px;
+    font-size: 0.95em;
+}
+
+
+.inventory-table {
+    overflow-x: auto; 
+}
+
+.inventory-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.inventory-table th, .inventory-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.inventory-table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.inventory-table tbody tr:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #ffe0b2; 
+}
+
+.inventory-table tfoot td {
+    background-color: #eee;
+    font-style: italic;
+    color: #666;
+    padding: 10px 15px;
+}
+/* Styling for Farming Page */
+
+/* Ethical Practices List */
+.ethics-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.ethics-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1.05em;
+}
+
+.ethics-list li:last-child {
+    border-bottom: none;
+}
+
+/* Sustainability Section Grid */
+.sustainability {
+    padding: 30px 0;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.sustainability h3 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sustainability-points {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 0 30px;
+}
+
+.sustainability-points > div {
+    flex-basis: 30%; /* Set width for 3 columns */
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sustainability-points h4 {
+    color: var(--tertiary-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Visit Form Styling */
+.visit-form {
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+.simple-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.cta-button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive adjustment for sustainability section */
+@media screen and (max-width: 768px) {
+    .sustainability-points {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .sustainability-points > div {
+        flex-basis: 100%;
+    }
+}
+
+/* Styling for Contact Page */
+
+.primary-contact {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.office-address {
+    margin: 15px 0;
+    line-height: 1.8;
+    font-style: normal; /* Override default italic address style */
+    color: #555;
+    background: var(--light-bg);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.contact-details time {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-map iframe {
+    /* Ensures map takes up the space nicely */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Departmental Contacts Table (Uses existing table styles, but adds specific section margin) */
+.departmental-contacts {
+    margin-top: 30px;
+}
+
+/* Responsive adjustment for contact page layout */
+@media screen and (max-width: 768px) {
+    .primary-contact {
+        flex-direction: column;
+    }
+    .contact-details {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
