@@ -20,6 +20,8 @@
                 <a href="products.html">Products</a>
                 <a href="farming.html">Farming</a>
                 <a href="contact.html"class="active">Contact</a>
+                <a href="Low fidelity design.html">Low Fidelity Design</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
     </header>
     <main>
@@ -104,6 +106,16 @@
         </section>
 
     </main>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
     </body>
      <footer>
         <section class="footer-links">
